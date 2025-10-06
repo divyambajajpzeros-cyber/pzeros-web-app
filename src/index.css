@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 50%;
+    --card: 0 0% 96%;
+    --card-foreground: 0 0% 50%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 50%;
+    --primary: 225 55% 56%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 50%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 50%;
+    --accent: 225 55% 56%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 80%;
+    --input: 0 0% 80%;
+    --ring: 225 55% 56%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-white text-tech-text font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display text-tech-dark font-semibold;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    @apply hidden;
+  }
+  
+  .section-pattern {
+    @apply relative bg-tech-darker;
+  }
+  
+  .section-pattern::before {
+    @apply hidden;
+  }
+  
+  .text-gradient {
+    @apply text-tech-purple;
+  }
+  
+  .btn-glow {
+    @apply relative hover:bg-tech-blue transition-colors;
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
